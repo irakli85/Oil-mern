@@ -77,7 +77,6 @@ const DecsForm = () => {
 
     return(
         <form className="create" onSubmit={handleSubmit}>
-            {/* <h3>დაამატე ახალი დეკლარაცია</h3> */}
             <div>
                 <label>C ნომერი</label>
                 <input type="number"  onChange={(e) => setCnumber(e.target.value)} value={cNumber}/>

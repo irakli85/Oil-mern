@@ -30,9 +30,13 @@ const Home = () => {
                     <TableHead/>
                     <tbody>
                         {
-                            declarations && declarations.map((dec) => (
-                                <DecDetails key={dec._id} dec = {dec}/>
-                            ))
+                            // declarations && declarations.map((dec) => (
+                            //     <DecDetails key={dec._id} dec = {dec}/>
+                            // ))
+
+                            declarations && declarations.filter( (dec) => dec.status === 'active').map((dec) => (
+                                    <DecDetails key={dec._id} dec = {dec}/>
+                                ))
                         }
                     </tbody>                   
                 </table>
