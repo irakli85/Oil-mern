@@ -6,7 +6,7 @@ const DecDetails = ({dec}) => {
     const {dispatch} = useDecsContext()
 
    const handleClick = async () => {
-    const response = await fetch('api/declarations/' + dec._id, {
+    const response = await fetch('https://oil-backend.onrender.com/api/declarations/' + dec._id, {
         method: 'DELETE'
     })
     const json = await response.json()

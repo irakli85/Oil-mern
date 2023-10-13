@@ -34,7 +34,7 @@ const DecsForm = () => {
         const declaration = {cNumber, regDate, warehouseName, warehouseNum, senderCountry, reciverCountry, border, sender, reciver, declarant, declarantNum, vehicle, cargo, hs, net, brutto, duration, tank, procedure, status}
     
     
-    const response = await fetch('api/declarations', {
+    const response = await fetch('https://oil-backend.onrender.com/api/declarations', {
         method: 'POST',
         body: JSON.stringify(declaration),
         headers: {
