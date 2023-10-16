@@ -152,6 +152,7 @@ const DecsForm = () => {
                     <option value="europetrol">ეუროპეტროლი</option>
                     <option value="notc">ნიუ ოილ ტრანსი</option>
                     <option value="trans logistic">ტრანს ლოჯისტიკი</option>
+                    <option value="omni">ომნი</option>
                 </select>
             </div>
            
