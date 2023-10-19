@@ -11,7 +11,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchDecs = async () =>{
-            const response = await fetch('https://oil-backend.onrender.com/api/declarations')
+            const response = await fetch('https://oilmern.onrender.com/api/declarations')
             const json = await response.json()
 
             if(response.ok){
