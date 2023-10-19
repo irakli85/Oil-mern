@@ -116,6 +116,7 @@ const DecsForm = () => {
                     <option value="kazakhstan">ყაზახეთი</option>
                     <option value="georgia">საქართველო</option>
                     <option value="uzbekistan">უზბეკეთი</option>
+                    <option value="malta">მალტა</option>
                 </select>
             </div>
           
