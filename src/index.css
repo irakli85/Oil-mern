@@ -200,6 +200,7 @@ nav {
 }
 nav a {
   margin-left: 10px;
+  display: none;
 }
 
 nav button {
