@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from '../assets/logo.png'
 import {useLogout} from '../hooks/useLogout'
 import { useAuthContext } from "../hooks/useAuthContext";
+import userSVG from '../assets/user.svg'
 
 const Navbar = () => {
     const {logout} = useLogout()
@@ -18,8 +19,11 @@ const Navbar = () => {
                 
                 <nav>
                    {user && (
-                        <div>
-                            <span>{user.email}</span>
+                        <div className="user-logout">
+                            <div className="user-info">
+                                <img src={userSVG} alt="user"/>
+                                {user.email.split('@')[0]}
+                            </div>
                             <button onClick={handleClick}>გამოსვლა</button>
                         </div>
                     )}
