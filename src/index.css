@@ -19,11 +19,12 @@ header {
 }
 header .container {
   /* max-width: 1400px; */
+  min-width: 100vw;
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  gap: 600px;
 }
 header a {
   color: #333;
@@ -195,6 +196,7 @@ label, select{
 nav {
   display: flex;
   align-items: center;
+  
 }
 nav a {
   margin-left: 10px;
@@ -218,4 +220,16 @@ form.signup, form.login {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+}
+
+.labels{
+  display: flex;
+  gap: 20px;
+}
+
+.labels a{
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+  text-decoration: none;
 }

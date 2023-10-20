@@ -1,6 +1,8 @@
 import { useEffect} from "react"
 import { useDecsContext } from "../hooks/useDecsContext"
 import {useAuthContext} from '../hooks/useAuthContext'
+import { Link } from "react-router-dom";
+
 
 import DecDetails from '../components/DecDetails'
 import TableHead from "../components/TableHead"
@@ -33,6 +35,14 @@ const Home = () => {
     return(
         <div className="home">
             <div className="decs">
+                <div className="labels">
+                    <Link to='/'>
+                        <h3>განაცხადები</h3>
+                    </Link>
+                    <Link to='/tankers'>
+                        <h3>ტანკერები</h3>
+                    </Link>
+                </div>
                 <DecsForm/>
                 <table>
                     <TableHead/>

@@ -13,14 +13,9 @@ const Navbar = () => {
 
     return(
         <header>
-            <div className="container">
+            <div className="container header-container">
             <img src={logo} alt="logo" />
-                <Link to='/'>
-                    <h3>განაცხადები</h3>
-                </Link>
-                <Link to='/tankers'>
-                    <h3>ტანკერები</h3>
-                </Link>
+                
                 <nav>
                    {user && (
                         <div>
