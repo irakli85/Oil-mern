@@ -1,5 +1,6 @@
 import { useEffect} from "react"
 import { useDecsContext } from "../hooks/useDecsContext"
+import {useAuthContext} from '../hooks/useAuthContext'
 
 import DecDetails from '../components/DecDetails'
 import TableHead from "../components/TableHead"
@@ -7,11 +8,15 @@ import DecsForm from "../components/DecsForm"
 
 const Home = () => {
    const {declarations, dispatch} =  useDecsContext()
-    
+   const {user} = useAuthContext()    
 
     useEffect(() => {
         const fetchDecs = async () =>{
-            const response = await fetch('https://oilmern.onrender.com/api/declarations')
+            const response = await fetch('https://oilmern.onrender.com/api/declarations', {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            })
             const json = await response.json()
 
             if(response.ok){
@@ -19,8 +24,11 @@ const Home = () => {
             }
         }
 
-        fetchDecs()
-    }, [])
+        if(user){
+            fetchDecs()
+        }
+
+    }, [dispatch, user])
 
     return(
         <div className="home">

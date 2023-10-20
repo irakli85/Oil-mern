@@ -1,10 +1,12 @@
 import React from 'react'
 import {useState} from 'react'
 import { useDecsContext } from "../hooks/useDecsContext"
+import {useAuthContext} from '../hooks/useAuthContext'
 
 
 const DecsForm = () => {
     const {dispatch} = useDecsContext()
+    const {user} = useAuthContext()
 
     const [cNumber, setCnumber] = useState('')
     const [regDate, setRegDate] = useState('')
@@ -31,6 +33,10 @@ const DecsForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
+        if(!user){
+            setError('you must logged in')
+        }
+
         const declaration = {cNumber, regDate, warehouseName, warehouseNum, senderCountry, reciverCountry, border, sender, reciver, declarant, declarantNum, vehicle, cargo, hs, net, brutto, duration, tank, procedure, status}
     
     
@@ -38,7 +44,8 @@ const DecsForm = () => {
         method: 'POST',
         body: JSON.stringify(declaration),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${user.token}`
         }
      })
 
