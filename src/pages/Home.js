@@ -44,7 +44,7 @@ const Home = () => {
                     </Link>
                 </div>
                 <DecsForm/>
-                <div>{declarations && Object.keys( declarations).length}</div>
+                <div>{declarations && Object.keys(declarations).length}</div>
                 <table>
                     <TableHead/>
                     <tbody>
@@ -53,11 +53,9 @@ const Home = () => {
                             //     <DecDetails key={dec._id} dec = {dec}/>
                             // ))
 
-                            declarations && declarations.filter( (dec) => dec.status === 'active').map((dec) => (
-                                <>
+                            declarations && declarations.filter( (dec) => dec.status === 'active').map((dec) => (                           
                                 
-                                <DecDetails key={dec._id} dec = {dec}/>
-                                </>
+                                <DecDetails key={dec._id} dec = {dec}/>                              
                                     
                                 ))
                         }
