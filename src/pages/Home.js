@@ -44,7 +44,7 @@ const Home = () => {
                     </Link>
                 </div>
                 <DecsForm/>
-                <div>{declarations && Object.keys(declarations).length}</div>
+                <div>ჩანაწერების რაოდენობა: {declarations && Object.keys(declarations).length}</div>
                 <table>
                     <TableHead/>
                     <tbody>
