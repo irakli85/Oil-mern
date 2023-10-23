@@ -44,6 +44,7 @@ const Home = () => {
                     </Link>
                 </div>
                 <DecsForm/>
+                <div>რაოდენობა: {declarations.length}</div>
                 <table>
                     <TableHead/>
                     <tbody>
@@ -52,8 +53,10 @@ const Home = () => {
                             //     <DecDetails key={dec._id} dec = {dec}/>
                             // ))
 
-                            declarations && declarations.filter( (dec) => dec.status === 'active').map((dec) => (
-                                    <DecDetails key={dec._id} dec = {dec}/>
+                            declarations && declarations.filter( (dec) => dec.status === 'active').map((dec) => (                           
+                                
+                                <DecDetails key={dec._id} dec = {dec}/>                               
+                             
                                 ))
                         }
                     </tbody>                   
