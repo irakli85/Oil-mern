@@ -15,8 +15,9 @@ const Navbar = () => {
     return(
         <header>
             <div className="container header-container">
-            <img src={logo} alt="logo" />
-                
+                <Link to='https://oil-dashboard.vercel.app/'>
+                    <img src={logo} alt="logo" />
+                </Link>               
                 <nav>
                    {user && (
                         <div className="user-logout">
