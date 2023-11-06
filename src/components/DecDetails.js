@@ -49,7 +49,7 @@ const DecDetails = ({dec}) => {
                 <td className="details-item">{dec.tank}</td>                
                 <td className="details-item">{dec.procedure}</td>
                 <td className="details-item status">{dec.status}</td>
-                <td className="delete"><img src={bin} onClick={handleClick} alt="bin"/></td>
+                {/* <td className="delete"><img src={bin} onClick={handleClick} alt="bin"/></td> */}
             </tr>        
     
     )
