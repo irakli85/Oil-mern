@@ -28,7 +28,7 @@ const DecDetails = ({dec}) => {
    }
 
     return(        
-            <tr className="table-body">                    
+            <tr className="table-body">
                 <td className="details-item">{"C " + dec.cNumber}</td>                
                 <td className="details-item">{dec.regDate}</td>                
                 <td className="details-item">{dec.warehouseName}</td>                
