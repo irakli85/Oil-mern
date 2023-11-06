@@ -45,7 +45,7 @@ const Home = () => {
                 </div>
                 <DecsForm/>
                 <div style={{padding: '10px'}}>ჩანაწერების რაოდენობა: {declarations && Object.keys(declarations).length}</div>
-                <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები: { declarations.filter((item) => item.status === 'active').length}</div>
+                <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები: { declarations && declarations.filter((item) => item.status === 'active').length}</div>
                 <table>
                     <TableHead/>
                     <tbody>
