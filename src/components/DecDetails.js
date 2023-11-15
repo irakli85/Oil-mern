@@ -39,7 +39,7 @@ const DecDetails = ({dec}) => {
                 <td className="details-item">{dec.sender}</td>                
                 <td className="details-item">{dec.reciver}</td>                
                 <td className="details-item">{dec.declarant}</td>                
-                {/* <td className="details-item">{dec.declarantNum}</td>                 */}
+                <td className="details-item">{dec.declarantNum}</td>                
                 <td className="details-item">{dec.vehicle}</td>                
                 <td className="details-item">{dec.cargo}</td>                
                 <td className="details-item">{dec.hs}</td>                
