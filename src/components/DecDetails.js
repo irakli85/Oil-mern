@@ -32,23 +32,23 @@ const DecDetails = ({dec}) => {
                 <td className="details-item">{"C " + dec.cNumber}</td>                
                 <td className="details-item">{dec.regDate}</td>                
                 <td className="details-item">{dec.warehouseName}</td>                
-                <td className="details-item">{dec.warehouseNum}</td>                
+                {/* <td className="details-item">{dec.warehouseNum}</td>                 */}
                 <td className="details-item">{dec.senderCountry}</td>                
                 <td className="details-item">{dec.reciverCountry}</td>                
                 <td className="details-item">{dec.border}</td>                
                 <td className="details-item">{dec.sender}</td>                
                 <td className="details-item">{dec.reciver}</td>                
                 <td className="details-item">{dec.declarant}</td>                
-                <td className="details-item">{dec.declarantNum}</td>                
+                {/* <td className="details-item">{dec.declarantNum}</td>                 */}
                 <td className="details-item">{dec.vehicle}</td>                
                 <td className="details-item">{dec.cargo}</td>                
                 <td className="details-item">{dec.hs}</td>                
                 <td className="details-item">{dec.net}</td>                
-                <td className="details-item">{dec.brutto}</td>               
+                {/* <td className="details-item">{dec.brutto}</td>                */}
                 <td className="details-item">{dec.duration}</td>                
                 <td className="details-item">{dec.tank}</td>                
                 <td className="details-item">{dec.procedure}</td>
-                <td className="details-item status">{dec.status}</td>
+                {/* <td className="details-item status">{dec.status}</td> */}
                 {/* <td className="delete"><img src={bin} onClick={handleClick} alt="bin"/></td> */}
             </tr>        
     
