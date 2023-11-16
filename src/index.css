@@ -254,3 +254,23 @@ form.signup, form.login {
   color: #fff;
   transition: all 0.3s ease-in-out;
 }
+
+.resetBtn {
+  height: 40px;
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.resetBtn:hover{
+  background: var(--primary);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+

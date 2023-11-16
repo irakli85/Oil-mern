@@ -18,7 +18,7 @@ const Filtred = () => {
    const [cargo, setCargo] = useState('')    
    const [procedure, setProcedure] = useState('')    
    const [status, setStatus] = useState('')    
-   const [sender, setSender] = useState(null)    
+   const [sender, setSender] = useState(' ')    
 
     useEffect(() => {
         const fetchDecs = async () =>{
@@ -47,7 +47,7 @@ const Filtred = () => {
         setCargo('')
         setProcedure('')
         setStatus('')
-        setSender(null)
+        setSender(' ')
     }
 
     
@@ -68,87 +68,87 @@ const Filtred = () => {
                 {/* <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები: { declarations && declarations.filter((item) => item.status === 'active').length}</div> */}
                 <Div>
                     <div>
-                        <label>საწყობი</label>
-                        <select onChange={(e) => setWname(e.target.value)} value={wName}>
-                            <option value=''>ყველა</option>
-                            <option value="BOT">BOT</option>
-                            <option value="europetrol">europetrol</option>
-                            <option value="vibro">vibro</option>
-                            <option value="terminal 1">terminal 1</option>
-                        </select>
+                        <Label>საწყობი</Label>
+                        <Select onChange={(e) => setWname(e.target.value)} value={wName}>
+                            <Option value=''>ყველა</Option>
+                            <Option value="BOT">BOT</Option>
+                            <Option value="europetrol">europetrol</Option>
+                            <Option value="vibro">vibro</Option>
+                            <Option value="terminal 1">terminal 1</Option>
+                        </Select>
                     </div>
 
                     <div>
-                        <label>გამგზ. ქვეყანა</label>
-                        <select onChange={(e) => setSendCountry(e.target.value)} value={sendCountry}>
-                            <option value=''>ყველა</option>
-                            <option value="russia">რუსეთი</option>
-                            <option value="turkmenistan">თურქმენეთი</option>
-                            <option value="kyrgyzstan">ყირგიზეთი</option>
-                            <option value="kazakhstan">ყაზახეთი</option>
-                            <option value="georgia">საქართველო</option>
-                            <option value="uzbekistan">უზბეკეთი</option>
-                            <option value="malta">მალტა</option>
-                            <option value="bulgaria">ბულგარეთი</option>
-                            <option value="azerbaijan">აზერბაიჯანი</option>
-                        </select>
+                        <Label>გამგზ. ქვეყანა</Label>
+                        <Select onChange={(e) => setSendCountry(e.target.value)} value={sendCountry}>
+                            <Option value=''>ყველა</Option>
+                            <Option value="russia">რუსეთი</Option>
+                            <Option value="turkmenistan">თურქმენეთი</Option>
+                            <Option value="kyrgyzstan">ყირგიზეთი</Option>
+                            <Option value="kazakhstan">ყაზახეთი</Option>
+                            <Option value="georgia">საქართველო</Option>
+                            <Option value="uzbekistan">უზბეკეთი</Option>
+                            <Option value="malta">მალტა</Option>
+                            <Option value="bulgaria">ბულგარეთი</Option>
+                            <Option value="azerbaijan">აზერბაიჯანი</Option>
+                        </Select>
                     </div>
 
                     <div>
-                        <label>დეკლარანტი</label>
-                        <select onChange={(e) => setDeclarant(e.target.value)} value={declarant}>
-                            <option value=''>ყველა</option>
-                            <option value="tero">თერო</option>
-                            <option value="europetrol">ეუროპეტროლი</option>
-                            <option value="notc">ნიუ ოილ ტრანსი</option>
-                            <option value="trans logistic">ტრანს ლოჯისტიკი</option>
-                            <option value="omni">ომნი</option>
-                            <option value="transflot">ტრანსფლოტი</option>
-                        </select>
+                        <Label>დეკლარანტი</Label>
+                        <Select onChange={(e) => setDeclarant(e.target.value)} value={declarant}>
+                            <Option value=''>ყველა</Option>
+                            <Option value="tero">თერო</Option>
+                            <Option value="europetrol">ეუროპეტროლი</Option>
+                            <Option value="notc">ნიუ ოილ ტრანსი</Option>
+                            <Option value="trans logistic">ტრანს ლოჯისტიკი</Option>
+                            <Option value="omni">ომნი</Option>
+                            <Option value="transflot">ტრანსფლოტი</Option>
+                        </Select>
                     </div>
 
                     <div>
-                        <label>საქონელი</label>
-                        <select onChange={(e) => setCargo(e.target.value)} value={cargo}>
-                            <option value=''>ყველა</option>
-                            <option value="fuel oil">მაზუთი</option>
-                            <option value="gasoline">ბენზინი</option>
-                            <option value="diesel">დიზელი</option>
-                            <option value="kerosine">ნავთი</option>
-                            <option value="propane">პროპანი</option>
-                            <option value="butan">ბუტანი</option>
-                            <option value="crude oil">ნედლი ნავთობი</option>
-                            <option value="vacuum gasoil">ვაკ. გაზოილი</option>
-                            <option value="base oil">ინდუსტ. ზეთი</option>
-                        </select>
+                        <Label>საქონელი</Label>
+                        <Select onChange={(e) => setCargo(e.target.value)} value={cargo}>
+                            <Option value=''>ყველა</Option>
+                            <Option value="fuel oil">მაზუთი</Option>
+                            <Option value="gasoline">ბენზინი</Option>
+                            <Option value="diesel">დიზელი</Option>
+                            <Option value="kerosine">ნავთი</Option>
+                            <Option value="propane">პროპანი</Option>
+                            <Option value="butan">ბუტანი</Option>
+                            <Option value="crude oil">ნედლი ნავთობი</Option>
+                            <Option value="vacuum gasoil">ვაკ. გაზოილი</Option>
+                            <Option value="base oil">ინდუსტ. ზეთი</Option>
+                        </Select>
                     </div>
 
                     <div>
-                        <label>პროცედურა</label>
-                        <select onChange={(e) => setProcedure(e.target.value)} value={procedure}>
-                            <option value=''>ყველა</option>
-                            <option value="80">80</option>
-                            <option value="10">10</option>
-                            <option value="10">40</option>
-                        </select>
+                        <Label>პროცედურა</Label>
+                        <Select onChange={(e) => setProcedure(e.target.value)} value={procedure}>
+                            <Option value=''>ყველა</Option>
+                            <Option value="80">80</Option>
+                            <Option value="10">10</Option>
+                            <Option value="10">40</Option>
+                        </Select>
                     </div>
 
                     <div>
-                        <label>სტატუსი</label>
-                        <select onChange={(e) => setStatus(e.target.value)} value={status}>
-                            <option value=''>ყველა</option>
-                            <option value="active">აქტიური</option>
-                            <option value="closed">დახურული</option>
-                        </select>
+                        <Label>სტატუსი</Label>
+                        <Select onChange={(e) => setStatus(e.target.value)} value={status}>
+                            <Option value=''>ყველა</Option>
+                            <Option value="active">აქტიური</Option>
+                            <Option value="closed">დახურული</Option>
+                        </Select>
                     </div>
 
-                    <div>
-                        <label>გამგზავნი</label>
+                    {/* <div>
+                        <Label>გამგზავნი</Label>
                         <input type="text"  onChange={(e) => setSender(e.target.value)} value={sender}/>
-                    </div>
+                    </div> */}
 
 
-                    <button  onClick={handleReset}>reset</button>
+                    <button className="resetBtn"  onClick={handleReset}>reset</button>
                 </Div>    
                 <table>
                     <TableHead/>
@@ -181,6 +181,22 @@ const Filtred = () => {
 
 const Div = styled.div`
     display: flex;
+    align-items: center;
+    gap: 20px;
+`
+
+const Option = styled.option`
+    font-size: 16px;    
+`
+
+const Select = styled.select`
+    width: 200px;
+`
+
+const Label = styled.label`
+    font-size: 16px;
+    text-align: center;
+    width: 200px;
 `
 
 export default Filtred
