@@ -245,6 +245,7 @@ const DecsForm = () => {
                 <select onChange={(e) => setProcedure(e.target.value)} value={procedure}>
                     <option value="80">80</option>
                     <option value="10">10</option>
+                    <option value="10">40</option>
                 </select>
             </div> 
             

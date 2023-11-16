@@ -1,4 +1,4 @@
-import { useEffect} from "react"
+import React, { useEffect} from "react"
 import { useDecsContext } from "../hooks/useDecsContext"
 import {useAuthContext} from '../hooks/useAuthContext'
 import { Link } from "react-router-dom";
@@ -37,10 +37,10 @@ const Home = () => {
             <div className="decs">
                 <div className="labels">
                     <Link to='/'>
-                        <h3>განაცხადები</h3>
+                        <h3>განაცხადების ფილტრი</h3>
                     </Link>
-                    <Link to='/tankers'>
-                        <h3>ტანკერები</h3>
+                    <Link to='/add'>
+                        <h3>განაცხადების დამატება</h3>
                     </Link>
                 </div>
                 <DecsForm/>

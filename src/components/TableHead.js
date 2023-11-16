@@ -1,3 +1,5 @@
+import React from "react"
+
 const TableHead = () => {
     return(   
         <thead>  
@@ -21,7 +23,7 @@ const TableHead = () => {
                 <th>ვადა</th>
                 <th>რეზერვუარი</th>
                 <th>პროც.</th>
-                {/* <th>სტატუსი</th> */}
+                <th>სტატუსი</th>
             </tr>
         </thead>           
     )
