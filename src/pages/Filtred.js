@@ -160,7 +160,7 @@ const Filtred = () => {
                                 item.senderCountry === sendCountry ||
                                 item.declarant === declarant ||
                                 item.cargo === cargo ||
-                                item.procedure === procedure ||
+                                item.procedure == procedure ||
                                 item.status === status ||
                                 item.sender.startsWith(sender)
 
