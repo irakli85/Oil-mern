@@ -201,8 +201,7 @@ const Label = styled.label`
 
 export const H3secondary = styled.h3`
     color: black;
-    font-size: 1rem;
-    
+    font-size: 1rem;    
 `
 
 export default Filtred
