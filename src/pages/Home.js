@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import DecDetails from '../components/DecDetails'
 import TableHead from "../components/TableHead"
 import DecsForm from "../components/DecsForm"
+import { H3secondary } from "./Filtred";
 
 const Home = () => {
    const {declarations, dispatch} =  useDecsContext()
@@ -37,10 +38,10 @@ const Home = () => {
             <div className="decs">
                 <div className="labels">
                     <Link to='/'>
-                        <h3>განაცხადების ფილტრი</h3>
+                        <H3secondary>ფილტრი</H3secondary>
                     </Link>
                     <Link to='/add'>
-                        <h3>განაცხადების დამატება</h3>
+                        <h3>დამატება</h3>
                     </Link>
                 </div>
                 <DecsForm/>

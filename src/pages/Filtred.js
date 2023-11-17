@@ -57,10 +57,10 @@ const Filtred = () => {
             <div className="decs">
                 <div className="labels">
                     <Link to='/'>
-                        <h3>განაცხადების ფილტრი</h3>
+                        <h3>ფილტრი</h3>
                     </Link>
                     <Link to='/add'>
-                        <h3>განაცხადების დამატება</h3>
+                        <H3secondary>დამატება</H3secondary>
                     </Link>
                 </div>
                 {/* <DecsForm/> */}
@@ -197,6 +197,12 @@ const Label = styled.label`
     font-size: 16px;
     text-align: center;
     width: 200px;
+`
+
+export const H3secondary = styled.h3`
+    color: black;
+    font-size: 1rem;
+    
 `
 
 export default Filtred

@@ -227,6 +227,7 @@ form.signup, form.login {
 .labels{
   display: flex;
   gap: 20px;
+  margin-left: 50px;
 }
 
 .labels a{
@@ -234,6 +235,8 @@ form.signup, form.login {
   font-size: 1.2em;
   color: var(--primary);
   text-decoration: none;
+  display: flex;
+  align-items: center;  
 }
 
 .user-logout{
