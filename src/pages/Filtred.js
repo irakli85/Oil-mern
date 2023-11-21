@@ -142,10 +142,10 @@ const Filtred = () => {
                         </Select>
                     </div>
 
-                    {/* <div>
+                    <div>
                         <Label>გამგზავნი</Label>
                         <input type="text"  onChange={(e) => setSender(e.target.value)} value={sender}/>
-                    </div> */}
+                    </div>
 
 
                     <button className="resetBtn"  onClick={handleReset}>reset</button>
