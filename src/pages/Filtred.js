@@ -18,7 +18,7 @@ const Filtred = () => {
    const [cargo, setCargo] = useState('')    
    const [procedure, setProcedure] = useState('')    
    const [status, setStatus] = useState('')    
-   const [sender, setSender] = useState(' ')    
+   const [sender, setSender] = useState('1')
 
     useEffect(() => {
         const fetchDecs = async () =>{
@@ -47,10 +47,9 @@ const Filtred = () => {
         setCargo('')
         setProcedure('')
         setStatus('')
-        setSender(' ')
+        setSender('')
     }
 
-    
   
     return(
         <div className="home">
@@ -65,7 +64,9 @@ const Filtred = () => {
                 </div>
                 {/* <DecsForm/> */}
                 {/* <div style={{padding: '10px'}}>ჩანაწერების რაოდენობა: {declarations && Object.keys(declarations).length}</div> */}
-                {/* <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები: { declarations && declarations.filter((item) => item.status === 'active').length}</div> */}
+                <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები:
+                 { declarations && declarations.filter((item) => item.status === 'active').length}
+                 </div>
                 <Div>
                     <div>
                         <Label>საწყობი</Label>
@@ -142,27 +143,28 @@ const Filtred = () => {
                         </Select>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <Label>გამგზავნი</Label>
                         <input type="text"  onChange={(e) => setSender(e.target.value)} value={sender}/>
-                    </div>
+                    </div> */}
 
 
                     <button className="resetBtn"  onClick={handleReset}>reset</button>
-                </Div>    
+                </Div>
+                  
                 <table>
                     <TableHead/>
                     <tbody>                    
                         {
                           
                             declarations && declarations.filter((item) => 
-                                item.warehouseName === wName ||
-                                item.senderCountry === sendCountry ||
-                                item.declarant === declarant ||
-                                item.cargo === cargo ||
-                                item.procedure == procedure ||
-                                item.status === status ||
-                                item.sender.startsWith(sender)
+                                item.warehouseName === wName && item.status === 'active' ||
+                                item.senderCountry === sendCountry && item.status === 'active' ||
+                                item.declarant === declarant && item.status === 'active' ||
+                                item.cargo === cargo && item.status === 'active' ||
+                                item.procedure == procedure && item.status === 'active' ||
+                                item.status === status && item.status === 'active'
+                                // || item.sender.startsWith(sender) && item.status === 'active'
 
 
                             ).map((dec) => (                           
