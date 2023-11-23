@@ -8,6 +8,7 @@ import DecDetails from '../components/DecDetails'
 import TableHead from "../components/TableHead"
 import DecsForm from "../components/DecsForm"
 import { H3secondary } from "./Filtred";
+import * as XLSX from 'xlsx';
 
 const Home = () => {
    const {declarations, dispatch} =  useDecsContext()
@@ -33,6 +34,16 @@ const Home = () => {
 
     }, [dispatch, user])
 
+    const handleExport = () => {
+        console.log(declarations)
+        let wb = XLSX.utils.book_new(),
+        ws = XLSX.utils.json_to_sheet(declarations)
+
+        XLSX.utils.book_append_sheet(wb, ws, 'oilFull')
+
+        XLSX.writeFile(wb, 'oilFull.xlsx')
+    }
+
     return(
         <div className="home">
             <div className="decs">
@@ -47,6 +58,7 @@ const Home = () => {
                 <DecsForm/>
                 <div style={{padding: '10px'}}>ჩანაწერების რაოდენობა: {declarations && Object.keys(declarations).length}</div>
                 <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები: { declarations && declarations.filter((item) => item.status === 'active').length}</div>
+                <button onClick={handleExport}>export to excell</button>
                 <table>
                     <TableHead/>
                     <tbody>
