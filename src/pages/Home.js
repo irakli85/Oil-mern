@@ -96,6 +96,7 @@ const Button = styled.button`
         color: #1aac83;
         outline: solid 1px #1aac83;
     }
+    transition: all 0.5s ease-in-out;
 `
 
 export default Home
