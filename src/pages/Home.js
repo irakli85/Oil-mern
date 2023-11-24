@@ -9,6 +9,7 @@ import TableHead from "../components/TableHead"
 import DecsForm from "../components/DecsForm"
 import { H3secondary } from "./Filtred";
 import * as XLSX from 'xlsx';
+import styled from "styled-components";
 
 const Home = () => {
    const {declarations, dispatch} =  useDecsContext()
@@ -58,7 +59,7 @@ const Home = () => {
                 <DecsForm/>
                 <div style={{padding: '10px'}}>ჩანაწერების რაოდენობა: {declarations && Object.keys(declarations).length}</div>
                 <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები: { declarations && declarations.filter((item) => item.status === 'active').length}</div>
-                <button onClick={handleExport}>export to excell</button>
+                <Button onClick={handleExport}>export to excell</Button>
                 <table>
                     <TableHead/>
                     <tbody>
@@ -80,5 +81,21 @@ const Home = () => {
         </div>
     )
 }
+
+const Button = styled.button`
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #1aac83;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    &:hover{
+        background-color: #fff;
+        color: #1aac83;
+        outline: solid 1px #1aac83;
+    }
+`
 
 export default Home
