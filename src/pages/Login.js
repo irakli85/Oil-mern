@@ -20,7 +20,7 @@ const Login = () => {
         setTimeout(() => {
           setLoading(false);
           console.log('Logged in!');
-        }, 20000); // Simulating a 2-second delay, replace with your actual API call or logic
+        }, 40000); // Simulating a 2-second delay, replace with your actual API call or logic
       };
 
     return(
