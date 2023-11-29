@@ -187,15 +187,15 @@ const Div = styled.div`
     gap: 20px;
 `
 
-const Option = styled.option`
+export const Option = styled.option`
     font-size: 16px;    
 `
 
-const Select = styled.select`
+export const Select = styled.select`
     width: 200px;
 `
 
-const Label = styled.label`
+export const Label = styled.label`
     font-size: 16px;
     text-align: center;
     width: 200px;

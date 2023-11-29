@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import { useDecsContext } from "../hooks/useDecsContext"
 import {useAuthContext} from '../hooks/useAuthContext'
+import { Option} from '../pages/Filtred'
 
 
 const DecsForm = () => {
@@ -98,10 +99,10 @@ const DecsForm = () => {
             <div>
                 <label>საწყობი</label>
                 <select onChange={(e) => setWarehouseName(e.target.value)} value={warehouseName}>
-                    <option value="BOT">BOT</option>
-                    <option value="europetrol">europetrol</option>
-                    <option value="vibro">vibro</option>
-                    <option value="terminal 1">terminal 1</option>
+                    <Option value="BOT">BOT</Option>
+                    <Option value="europetrol">europetrol</Option>
+                    <Option value="vibro">vibro</Option>
+                    <Option value="terminal 1">terminal 1</Option>
                 </select>
             </div>            
           
@@ -109,42 +110,42 @@ const DecsForm = () => {
             <div>
                 <label>საწყობი ს/კ</label>
                 <select onChange={(e) => setWarehouseNum(e.target.value)} value={warehouseNum}>
-                    <option value="245432544">245432544</option>
-                    <option value="245578398">245578398</option>
-                    <option value="445435930">445435930</option>
-                    <option value="416313885">416313885</option>
+                    <Option value="245432544">245432544</Option>
+                    <Option value="245578398">245578398</Option>
+                    <Option value="445435930">445435930</Option>
+                    <Option value="416313885">416313885</Option>
                 </select>
             </div>
         
             <div>
                 <label>გამგზ. ქვეყანა</label>
                 <select onChange={(e) => setSenderCountry(e.target.value)} value={senderCountry}>
-                    <option value="russia">რუსეთი</option>
-                    <option value="turkmenistan">თურქმენეთი</option>
-                    <option value="kyrgyzstan">ყირგიზეთი</option>
-                    <option value="kazakhstan">ყაზახეთი</option>
-                    <option value="georgia">საქართველო</option>
-                    <option value="uzbekistan">უზბეკეთი</option>
-                    <option value="malta">მალტა</option>
-                    <option value="bulgaria">ბულგარეთი</option>
-                    <option value="azerbaijan">აზერბაიჯანი</option>
+                    <Option value="russia">რუსეთი</Option>
+                    <Option value="turkmenistan">თურქმენეთი</Option>
+                    <Option value="kyrgyzstan">ყირგიზეთი</Option>
+                    <Option value="kazakhstan">ყაზახეთი</Option>
+                    <Option value="georgia">საქართველო</Option>
+                    <Option value="uzbekistan">უზბეკეთი</Option>
+                    <Option value="malta">მალტა</Option>
+                    <Option value="bulgaria">ბულგარეთი</Option>
+                    <Option value="azerbaijan">აზერბაიჯანი</Option>
                 </select>
             </div>
           
             <div>
                 <label>დანიშ. ქვეყანა</label>
                 <select onChange={(e) => setReciverCountry(e.target.value)} value={reciverCountry}>
-                    <option value="unknown">უცნობი</option>
-                    <option value="turkey">თურქეთი</option>
-                    <option value="armenia">სომხეთი</option>
+                    <Option value="unknown">უცნობი</Option>
+                    <Option value="turkey">თურქეთი</Option>
+                    <Option value="armenia">სომხეთი</Option>
                 </select>
             </div>           
 
             <div>
                 <label>შემოსვლის სგპ</label>
                 <select onChange={(e) => setBorder(e.target.value)} value={border}>
-                    <option value="69604">69604</option>
-                    <option value="69009">69009</option>
+                    <Option value="69604">69604</Option>
+                    <Option value="69009">69009</Option>
                 </select>
             </div>
 
@@ -161,62 +162,62 @@ const DecsForm = () => {
             <div>
                 <label>დეკლარანტი</label>
                 <select onChange={(e) => setDeclarant(e.target.value)} value={declarant}>
-                    <option value="tero">თერო</option>
-                    <option value="europetrol">ეუროპეტროლი</option>
-                    <option value="notc">ნიუ ოილ ტრანსი</option>
-                    <option value="trans logistic">ტრანს ლოჯისტიკი</option>
-                    <option value="omni">ომნი</option>
-                    <option value="transflot">ტრანსფლოტი</option>
+                    <Option value="tero">თერო</Option>
+                    <Option value="europetrol">ეუროპეტროლი</Option>
+                    <Option value="notc">ნიუ ოილ ტრანსი</Option>
+                    <Option value="trans logistic">ტრანს ლოჯისტიკი</Option>
+                    <Option value="omni">ომნი</Option>
+                    <Option value="transflot">ტრანსფლოტი</Option>
                 </select>
             </div>
            
             <div>
                 <label>დეკლარანტის ს/კ</label>
                 <select onChange={(e) => setDeclarantNum(e.target.value)} value={declarantNum}>
-                    <option value="245626185">245626185</option>
-                    <option value="245578398">245578398</option>
-                    <option value="446962519">446962519</option>
-                    <option value="445490095">445490095</option>
-                    <option value="445564568">445564568</option>
-                    <option value="245599838">245599838</option>
+                    <Option value="245626185">245626185</Option>
+                    <Option value="245578398">245578398</Option>
+                    <Option value="446962519">446962519</Option>
+                    <Option value="445490095">445490095</Option>
+                    <Option value="445564568">445564568</Option>
+                    <Option value="245599838">245599838</Option>
                 </select>
             </div>
          
             <div>
                 <label>ტრანსპორტი</label>
                 <select onChange={(e) => setVehicle(e.target.value)} value={vehicle}>
-                    <option value="railway">რკინიგზა</option>
-                    <option value="tanker">გემი</option>
+                    <Option value="railway">რკინიგზა</Option>
+                    <Option value="tanker">გემი</Option>
                 </select>
             </div>            
 
             <div>
                 <label>საქონელი</label>
                 <select onChange={(e) => setCargo(e.target.value)} value={cargo}>
-                    <option value="fuel oil">მაზუთი</option>
-                    <option value="gasoline">ბენზინი</option>
-                    <option value="diesel">დიზელი</option>
-                    <option value="kerosine">ნავთი</option>
-                    <option value="propane">პროპანი</option>
-                    <option value="butan">ბუტანი</option>
-                    <option value="crude oil">ნედლი ნავთობი</option>
-                    <option value="vacuum gasoil">ვაკ. გაზოილი</option>
-                    <option value="base oil">ინდუსტ. ზეთი</option>
+                    <Option value="fuel oil">მაზუთი</Option>
+                    <Option value="gasoline">ბენზინი</Option>
+                    <Option value="diesel">დიზელი</Option>
+                    <Option value="kerosine">ნავთი</Option>
+                    <Option value="propane">პროპანი</Option>
+                    <Option value="butan">ბუტანი</Option>
+                    <Option value="crude oil">ნედლი ნავთობი</Option>
+                    <Option value="vacuum gasoil">ვაკ. გაზოილი</Option>
+                    <Option value="base oil">ინდუსტ. ზეთი</Option>
                 </select>
             </div>
             
             <div>
                 <label>საქ. კოდი</label>
                 <select onChange={(e) => setHs(e.target.value)} value={hs}>
-                    <option value="27101962">27101962</option>
-                    <option value="27101241">27101241</option>
-                    <option value="27101943">27101943</option>
-                    <option value="27111294">27111294</option>
-                    <option value="27101925">27101925</option>
-                    <option value="27111397">27111397</option>
-                    <option value="27101931">27101931</option>
-                    <option value="27101971">27101971</option>
-                    <option value="27101245">27101245</option>
+                    <Option value="27101962">27101962</Option>
+                    <Option value="27101241">27101241</Option>
+                    <Option value="27101943">27101943</Option>
+                    <Option value="27111294">27111294</Option>
+                    <Option value="27101925">27101925</Option>
+                    <Option value="27111397">27111397</Option>
+                    <Option value="27101931">27101931</Option>
+                    <Option value="27101971">27101971</Option>
+                    <Option value="27101245">27101245</Option>
                 </select>
             </div>    
 
@@ -243,17 +244,17 @@ const DecsForm = () => {
              <div>
                 <label>პროცედურა</label>
                 <select onChange={(e) => setProcedure(e.target.value)} value={procedure}>
-                    <option value="80">80</option>
-                    <option value="10">10</option>
-                    <option value="10">40</option>
+                    <Option value="80">80</Option>
+                    <Option value="10">10</Option>
+                    <Option value="10">40</Option>
                 </select>
             </div> 
             
             <div>
                 <label>სტატუსი</label>
                 <select onChange={(e) => setStatus(e.target.value)} value={status}>
-                    <option value="active">აქტიური</option>
-                    <option value="closed">დახურული</option>
+                    <Option value="active">აქტიური</Option>
+                    <Option value="closed">დახურული</Option>
                 </select>
             </div> 
 
