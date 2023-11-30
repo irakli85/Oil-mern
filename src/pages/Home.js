@@ -59,6 +59,7 @@ const Home = () => {
                 <DecsForm/>
                 <div style={{padding: '10px'}}>ჩანაწერების რაოდენობა: {declarations && Object.keys(declarations).length}</div>
                 <div style={{padding: '10px', fontWeight: 900}}>აქტიური ჩანაწერები: { declarations && declarations.filter((item) => item.status === 'active').length}</div>
+                <div style={{padding: '10px'}}>საწყობებში არსებული რაოდენობა: {declarations && declarations.filter(dec => dec.status === 'active').reduce( (acc, dec) => acc + dec.net, 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} კგ</div>
                 <Button onClick={handleExport}>export to excell</Button>
                 <table>
                     <TableHead/>

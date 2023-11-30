@@ -85,7 +85,6 @@ const DecsForm = () => {
 
     return(
         <form className="create" onSubmit={handleSubmit}>
-            <div>{}</div>
             <div>
                 <label>C ნომერი</label>
                 <input type="number"  onChange={(e) => setCnumber(e.target.value)} value={cNumber}/>
