@@ -24,6 +24,7 @@ const TableHead = () => {
                 <th>რეზერვუარი</th>
                 <th>პროც.</th>
                 <th>სტატუსი</th>
+                <th>ვადის თარიღი</th>
             </tr>
         </thead>           
     )

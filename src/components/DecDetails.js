@@ -27,6 +27,20 @@ const DecDetails = ({dec}) => {
     }
    }
 
+   let datearray = dec.regDate.split(".");
+
+    let newdate = datearray[1] + '/' + datearray[0] + '/' + datearray[2];
+
+   const date = new Date(newdate)
+   
+   date.setDate(date.getDate()+ Number(dec.duration))
+
+   let datearray2 = date.toLocaleDateString().split('/')
+
+   let newdate2 = datearray2[1] + '.' + datearray2[0] + '.' + datearray2[2];
+   
+
+
     return(        
             <tr className="table-body">
                 <td className="details-item">{"C " + dec.cNumber}</td>                
@@ -49,6 +63,7 @@ const DecDetails = ({dec}) => {
                 <td className="details-item">{dec.tank}</td>                
                 <td className="details-item">{dec.procedure}</td>
                 <td className="details-item status">{dec.status}</td>
+                <td className="details-item">{newdate2}</td>
                 {/* <td className="delete"><img src={bin} onClick={handleClick} alt="bin"/></td> */}
             </tr>        
     
