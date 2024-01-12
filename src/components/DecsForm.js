@@ -167,6 +167,7 @@ const DecsForm = () => {
                     <Option value="trans logistic">ტრანს ლოჯისტიკი</Option>
                     <Option value="omni">ომნი</Option>
                     <Option value="transflot">ტრანსფლოტი</Option>
+                    <Option value="trans logistic batumi">ტრანს ლოჯისტიკი ბათუმი</Option>
                 </select>
             </div>
            
@@ -179,6 +180,7 @@ const DecsForm = () => {
                     <Option value="445490095">445490095</Option>
                     <Option value="445564568">445564568</Option>
                     <Option value="245599838">245599838</Option>
+                    <Option value="245599838">405660413</Option>
                 </select>
             </div>
          
@@ -245,7 +247,7 @@ const DecsForm = () => {
                 <select onChange={(e) => setProcedure(e.target.value)} value={procedure}>
                     <Option value="80">80</Option>
                     <Option value="10">10</Option>
-                    <Option value="10">40</Option>
+                    <Option value="40">40</Option>
                 </select>
             </div> 
             
